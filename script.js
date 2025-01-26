@@ -183,3 +183,13 @@ function sendMail() {
         });
 }
 
+// Function to toggle the navbar visibility on small screens
+function toggleMenu() {
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.classList.toggle('active');
+}
+
+function closeMenu() {
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.classList.remove('active');
+}

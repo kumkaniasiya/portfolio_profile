@@ -451,3 +451,71 @@ html, body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+/* Initially hide the navbar menu on small screens */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin: 0 15px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Mobile responsive styles */
+/* Hamburger styles */
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  display: none; /* Hidden by default on larger screens */
+}
+
+/* Dropdown menu styles */
+.dropdown {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #3333333a;
+  width: 100%;
+  z-index: 1000;
+}
+
+.dropdown.active {
+  display: block; /* Show when active */
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.link {
+  margin: 10px 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Show hamburger on smaller screens */
+@media screen and (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+  .navbar {
+      display: none; /* Hide navbar on small screens */
+  }
+}
